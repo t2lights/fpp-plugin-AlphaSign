@@ -1,4 +1,4 @@
 #!/bin/bash
 
-# fpp-plugin-AlphaSign new install script
+# fpp-plugin-AlphaSign newer install script
 
