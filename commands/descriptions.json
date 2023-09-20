@@ -1,0 +1,12 @@
+[
+{ "name": "AlphaSign Plugin On",
+  "script": "on.sh",
+  "args": [
+  ]
+},
+{ "name": "AlphaSign Plugin Off",
+  "script": "off.sh",
+  "args": [
+  ]
+}
+]
