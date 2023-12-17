@@ -1,1 +1,8 @@
-Alpha Sign Plugin Outputs Page Placeholder
+<?php
+
+$pluginName = basename(dirname(__FILE__));
+
+echo $pluginName;
+
+?>
+
