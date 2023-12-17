@@ -27,7 +27,7 @@ $menuEntries = Array(
 	Array(
 		'text' => 'AlphaSign - Setup',
 		'type' => 'output',
-		'page' => 'output_setup.php',
+		'page' => 'plugin_setup.php',
 		'wrap' => 1
 	),
 	Array(
