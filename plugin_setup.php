@@ -1,7 +1,7 @@
 <?php
 
 error_reporting(E_ALL);
-include_once functions.php;
+include_once "functions.php";
 
 $debug=true;
 $pluginName = basename(dirname(__FILE__));
