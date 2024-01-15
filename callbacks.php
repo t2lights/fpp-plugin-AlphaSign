@@ -1,6 +1,7 @@
-<?php
+#!/usr/bin/php
+<?
 
-logEntry("callbacks.php is being run");
+logEntry("callbacks is being run");
 
 ?>
 
