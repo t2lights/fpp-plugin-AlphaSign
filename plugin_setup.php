@@ -1,5 +1,7 @@
 <?php
 
+include_once functions.php;
+
 $pluginName = basename(dirname(__FILE__));
 $logFile = $settings['logDirectory']."/".$pluginName.".log";
 $myPid = getmypid();
@@ -10,7 +12,7 @@ echo "Logfile:      ".$logFile."<br/> \n";
 echo "My PID:       ".$myPid."<br/> \n";
 echo "Settings File: ".$settingsFile."<br/> \n";
 
-logEntry("The settings file name is called: ");
+logEntry("The settings file name is called: ".$settingsFile);
 
 ?>
 
