@@ -12,18 +12,22 @@
 # help menu in this example template.
 
 $menuEntries = Array(
+/*
 	Array(
 		'text' => 'AlphaSign - Status',
 		'type' => 'status',
 		'page' => 'status.php',
 		'wrap' => 1
 	),
+*/
+/*
 	Array(
 		'text' => 'AlphaSign - Content Setup',
 		'type' => 'content',
 		'page' => 'content.php',
 		'wrap' => 1
 	),
+*/
 	Array(
 		'text' => 'AlphaSign - Setup',
 		'type' => 'output',
