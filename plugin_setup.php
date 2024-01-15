@@ -10,7 +10,7 @@ echo "Logfile:      ".$logFile."<br/> \n";
 echo "My PID:       ".$myPid."<br/> \n";
 echo "Settings File: ".$settingsFile."<br/> \n";
 
-logEntry("The settings file name is called: ".$settingsFile);
+logEntry("The settings file name is called: ");
 
 ?>
 
