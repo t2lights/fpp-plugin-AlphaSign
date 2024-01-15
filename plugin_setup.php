@@ -1,7 +1,7 @@
 <?php
 
 error_reporting(E_ALL);
-include_once functions.inc.php;
+include_once "functions.php";
 
 $pluginName = basename(dirname(__FILE__));
 $logFile = $settings['logDirectory']."/".$pluginName.".log";
