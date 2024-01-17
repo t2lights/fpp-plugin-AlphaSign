@@ -22,7 +22,7 @@ Here is a simple example which would add a
 */
 
 
-function getEndpointsfppBigButtons() {
+function getEndpointsfpppluginAlphaSign() {
     $result = array();
 
     $ep = array(
