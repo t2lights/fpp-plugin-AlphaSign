@@ -57,6 +57,8 @@ $myPid = getmypid();
 
 $FPPD_COMMAND = $argv[1];
 
+logEntry("argv1=".$argv[1]);
+
 //echo "FPPD Command: ".$FPPD_COMMAND."<br/> \n";
 
 if($FPPD_COMMAND == "--list") {
