@@ -57,7 +57,10 @@ $myPid = getmypid();
 
 $FPPD_COMMAND = $argv[1];
 
+logEntry("argv0=".$argv[0]);
 logEntry("argv1=".$argv[1]);
+logEntry("argv2=".$argv[2]);
+logEntry("argv3=".$argv[3]);
 
 //echo "FPPD Command: ".$FPPD_COMMAND."<br/> \n";
 
