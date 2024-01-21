@@ -9,7 +9,7 @@ include_once("functions.php");
 
 $logFile = $settings['logDirectory']."/".$pluginName.".log";
 $pluginConfigFile = $settings['configDirectory'] . "/plugin." .$pluginName;
-
+logEntry("Log filename is:".$logFile);
 //argv[0] is  the program
 //argv[1] is the first argument in the registration this will be --list
 
