@@ -3,8 +3,6 @@
 $pluginName = basename(dirname(__FILE__));
 $DEBUG=true;
 
-logEntry("aaa");
-
 //include_once("/opt/fpp/www/config.php");
 //include_once("/opt/fpp/www/common.php");
 include_once("functions.php");
