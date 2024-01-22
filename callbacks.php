@@ -20,8 +20,8 @@ $callbackRegisters = "media\n";
 $FPPD_COMMAND = $argv[1];
 
 if($FPPD_COMMAND == "--list") {
-	logEntry("FPPD List Registration request: responded:". $callbackRegisters);
 	echo $callbackRegisters;
+	logEntry("FPPD List Registration request: responded:". $callbackRegisters);
 	exit(0);
 }
 
@@ -29,7 +29,7 @@ if($FPPD_COMMAND == "--type") {
 	logEntry("DEBUG: type callback requested");
 	exit(0);
 } else {
-	logEntry($argv[0]." called with no parameteres");
+	logEntry($argv[0]." called with no parameters");
 	exit(0);
 }
 ?>
