@@ -2,7 +2,6 @@
 
 $pluginName = basename(dirname(__FILE__));
 $DEBUG=true;
-global $settings;
 
 include_once("/opt/fpp/www/config.php");
 include_once("/opt/fpp/www/common.php");
@@ -10,7 +9,9 @@ include_once("functions.php");
 
 $logFile = $settings['logDirectory']."/".$pluginName.".log";
 $pluginConfigFile = $settings['configDirectory'] . "/plugin." .$pluginName;
+
 logEntry("Log filename is:".$logFile);
+
 //argv[0] is  the program
 //argv[1] is the first argument in the registration this will be --list
 
