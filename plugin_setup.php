@@ -8,7 +8,7 @@ $pluginName = basename(dirname(__FILE__));
 $logFile = $settings['logDirectory']."/".$pluginName.".log";
 $settingsFile = $settings['configDirectory']."/".$pluginName.".cfg";
 
-logEntry("The settings file name is called: ".$settingsFile);
+//logEntry("The settings file name is called: ".$settingsFile);
 ?>
 
 //=================================================================================================================
