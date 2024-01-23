@@ -1,29 +1,30 @@
 <?php
-error_reporting(0);
 
 $pluginName = basename(dirname(__FILE__));
 $DEBUG=true;
 
-//$skipJSsettings = 1;
+$skipJSsettings = 1;	// need this so config doesn't print out JavaScrip arrays
 include_once("/opt/fpp/www/config.php");
 include_once("/opt/fpp/www/common.php");
 include_once("functions.php");
 
-$ENABLED="on";
+$ENABLED="";
 
 $logFile = $settings['logDirectory']."/".$pluginName.".log";
 $pluginConfigFile = $settings['configDirectory'] . "/plugin." .$pluginName;
 
-if (file_exists($pluginConfigFile))
+if (file_exists($pluginConfigFile)) {
 	$pluginSettings = parse_ini_file($pluginConfigFile);
-        logEntry("DEBUG: plugin config file: ".$pluginConfigFile);
+}
 
-        $STATIC_TEXT_PRE = urldecode($pluginSettings['STATIC_TEXT_PRE']);
-        $STATIC_TEXT_POST = urldecode($pluginSettings['STATIC_TEXT_POST']);
-        $LOOPTIME = $pluginSettings['LOOPTIME'];
-        $SEPARATOR = urldecode($pluginSettings['SEPARATOR']);	
-        $DEVICE= urldecode($pluginSettings['DEVICE']);	
-        $DEVICE_CONNECTION_TYPE= urldecode($pluginSettings['DEVICE_CONNECTION_TYPE']);	
+logEntry("DEBUG: plugin config file: ".$pluginConfigFile);
+
+$STATIC_TEXT_PRE = urldecode($pluginSettings['STATIC_TEXT_PRE']);
+$STATIC_TEXT_POST = urldecode($pluginSettings['STATIC_TEXT_POST']);
+$LOOPTIME = $pluginSettings['LOOPTIME'];
+$SEPARATOR = urldecode($pluginSettings['SEPARATOR']);	
+$DEVICE= urldecode($pluginSettings['DEVICE']);	
+$DEVICE_CONNECTION_TYPE= urldecode($pluginSettings['DEVICE_CONNECTION_TYPE']);	
 $ENABLED = urldecode($pluginSettings['ENABLED']);
 
 $ENABLED="on";
@@ -33,21 +34,13 @@ $ENABLED="on";
 
 if($ENABLED != "on" && $ENABLED != "1") {
 	logEntry("Plugin Status: DISABLED Please enable in Plugin Setup to use & Restart FPPD Daemon");
-	
 	exit(0);
 }
-$callbackRegisters = "media\n";
-$myPid = getmypid();
-
-        $BAUD = "9600";
-        $PARITY="none";
-        $CHAR_BITS="8";
-        $STOP_BITS="1";
 
 $FPPD_COMMAND = $argv[1];
 
 if($FPPD_COMMAND == "--list") {
-			echo $callbackRegisters;
+			echo "media\n";
 			logEntry("FPPD List Registration request: responded:". $callbackRegisters);
 			exit(0);
 }
