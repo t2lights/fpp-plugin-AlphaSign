@@ -11,6 +11,7 @@ $settingsFile = $settings['configDirectory']."/".$pluginName.".cfg";
 logEntry("The settings file name is called: ".$settingsFile);
 ?>
 
+<!DOCTYPE html>
 <html>
 <head></head>
 
@@ -22,7 +23,7 @@ logEntry("The settings file name is called: ".$settingsFile);
 <p><h2>Configuration:</h2>
 <ul>
 <li>Configure your connection type, Serial, Static text you want to send in front of Artist and song and post text</li>
-</ul>
+</ul></p>
 </header>
 
 <form method="post" action="http://<?php echo $_SERVER['SERVER_ADDR'].":".$_SERVER['SERVER_PORT']?>/plugin.php?plugin=<?php echo $pluginName;?>&page=plugin_setup.php">
