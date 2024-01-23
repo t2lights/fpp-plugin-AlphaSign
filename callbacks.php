@@ -3,12 +3,12 @@
 $pluginName = basename(dirname(__FILE__));
 $DEBUG=false;
 
-include_once("/opt/fpp/www/config.php");
-include_once("/opt/fpp/www/common.php");
+//include_once("/opt/fpp/www/config.php");
+//include_once("/opt/fpp/www/common.php");
 include_once("functions.php");
 
-$logFile = $settings['logDirectory']."/".$pluginName.".log";
-$pluginConfigFile = $settings['configDirectory'] . "/plugin." .$pluginName;
+//$logFile = $settings['logDirectory']."/".$pluginName.".log";
+//$pluginConfigFile = $settings['configDirectory'] . "/plugin." .$pluginName;
 
 logEntry("Log filename is:".$logFile);
 
