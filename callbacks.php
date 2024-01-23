@@ -3,7 +3,7 @@
 $pluginName = basename(dirname(__FILE__));
 $DEBUG=true;
 
-$skipJSsettings = 1;	// need this so config doesn't print out JavaScrip arrays
+$skipJSsettings = 1;	// need this so config does not print out JavaScript arrays
 include_once("/opt/fpp/www/config.php");
 include_once("/opt/fpp/www/common.php");
 include_once("functions.php");
@@ -11,7 +11,7 @@ include_once("functions.php");
 $ENABLED="";
 
 $logFile = $settings['logDirectory']."/".$pluginName.".log";
-$pluginConfigFile = $settings['configDirectory'] . "/plugin." .$pluginName.".cfg";
+$pluginConfigFile = $settings['configDirectory'] ."/".$pluginName.".cfg";
 
 if (file_exists($pluginConfigFile)) {
 	$pluginSettings = parse_ini_file($pluginConfigFile);
