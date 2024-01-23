@@ -20,14 +20,11 @@ logEntry("The settings file name is called: ".$settingsFile);
 <fieldset>
 <legend>Alpha Sign Support Instructions</legend>
 
-<p>Known Issues:
+<header><p><h1>Configuration:</h1>
 <ul>
-<li>None known</ul>
-
-<p>Configuration:
-<ul>
-<li>Configure your connection type, Serial, Static text you want to send in front of Artist and song and post text, loop time if you want looping and color</li>
+<li>Configure your connection type, Serial, Static text you want to send in front of Artist and song and post text</li>
 </ul>
+</header>
 
 <form method="post" action="http://<? echo $_SERVER['SERVER_ADDR'].":".$_SERVER['SERVER_PORT']?>/plugin.php?plugin=<?php echo $pluginName;?>&page=plugin_setup.php">
 <?php 
