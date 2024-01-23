@@ -1,5 +1,4 @@
-#!/usr/bin/php
-<?
+<?php
 error_reporting(0);
 
 $pluginName = basename(dirname(__FILE__));
