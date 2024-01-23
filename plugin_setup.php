@@ -20,7 +20,13 @@ logEntry("The settings file name is called: ".$settingsFile);
 <fieldset>
 <legend>Alpha Sign Support Instructions</legend>
 
-<header><p><h1>Configuration:</h1>
+<header>
+<p><h1>Configuration:</h1>
+<p><h2>Configuration:</h2>
+<p><h3>Configuration:</h3>
+<p><h4>Configuration:</h4>
+<p><h5>Configuration:</h5>
+<p><h6>Configuration:</h6>
 <ul>
 <li>Configure your connection type, Serial, Static text you want to send in front of Artist and song and post text</li>
 </ul>
