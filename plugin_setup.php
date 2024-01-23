@@ -42,37 +42,7 @@ echo "<p/> \n";
 ?>
 
 <?php
-
-echo "Connection type: \n";
-
-echo "<select name=\"DEVICE_CONNECTION_TYPE\"> \n";
-                        if($DEVICE_CONNECTION_TYPE != "")
-                        {
-				switch ($DEVICE_CONNECTION_TYPE)
-				{
-					case "SERIAL":
-                                		echo "<option selected value=\"".$DEVICE_CONNECTION_TYPE."\">".$DEVICE_CONNECTION_TYPE."</option> \n";
-                                //		echo "<option value=\"IP\">IP</option> \n";
-                                		break;
-					case "IP":
-                                		echo "<option selected value=\"".$DEVICE_CONNECTION_TYPE."\">".$DEVICE_CONNECTION_TYPE."</option> \n";
-                                		echo "<option value=\"SERIAL\">SERIAL</option> \n";
-                        			break;
-			
-				
-	
-				}
-	
-			} else {
-
-                                echo "<option value=\"SERIAL\">SERIAL</option> \n";
-                          //      echo "<option value=\"IP\">IP</option> \n";
-			}
-                
-        
-echo "</select> \n";
 echo "<p/> \n";
-
 echo "<p/> \n";
 echo "SERIAL DEVICE: \n";
 echo "<select name=\"DEVICE\"> \n";
@@ -91,19 +61,15 @@ echo "</select> \n";
 ?>
 
 <p/>
-
 STATIC TEXT PRE:
 <input type="text" size="64" value="<? if($STATIC_TEXT_PRE !="" ) { echo $STATIC_TEXT_PRE; } else { echo "";}?>" name="STATIC_TEXT_PRE" id="STATIC_TEXT_PRE"></input>
 
 <p/>
-
 STATIC TEXT POST:
 <input type="text" size="64" value="<? if($STATIC_TEXT_POST !="" ) { echo $STATIC_TEXT_POST; } else { echo "";}?>" name="STATIC_TEXT_POST" id="STATIC_TEXT_POST"></input>
 
 <p/>
 <p/>
-
-
 <p/>
 
 Separator between SongTitle & Song Artist:
@@ -112,19 +78,11 @@ Separator between SongTitle & Song Artist:
 <p/>
 <input id="submit_button" name="submit" type="submit" class="buttons" value="Save Config">
 
-
 <p>To report a bug, please file it against the BetaBrite plugin project on Git: https://github.com/LightsOnHudson/FPP-Plugin-BetaBrite
 
 <p>
-<?
- if(file_exists($pluginUpdateFile))
- {
- 	//echo "updating plugin included";
-	include $pluginUpdateFile;
-}
-?>
-</form>
 
+</form>
 </fieldset>
 </div>
 <br />
