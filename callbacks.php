@@ -2,18 +2,13 @@
 <?
 error_reporting(0);
 
-//$pluginName ="BetaBrite";
-$pluginName = basename(dirname(__FILE__));  //pjd 7-10-2019   added per dkulp 
+$pluginName = basename(dirname(__FILE__));
 $DEBUG=true;
 
 $skipJSsettings = 1;
 include_once("/opt/fpp/www/config.php");
-
 include_once("/opt/fpp/www/common.php");
 include_once("functions.php");
-//include_once("BetaBriteFunctions.inc.php");
-//include_once("commonFunctions.inc.php");
-
 
 $ENABLED="on";
 
@@ -37,10 +32,6 @@ $ENABLED="on";
 //arg0 is  the program
 //arg1 is the first argument in the registration this will be --list
 
-//$logFile = $logDirectory."/logs/betabrite.log";
-//echo "Enabled: ".$ENABLED."<br/> \n";
-
-
 if($ENABLED != "on" && $ENABLED != "1") {
 	logEntry("Plugin Status: DISABLED Please enable in Plugin Setup to use & Restart FPPD Daemon");
 	
@@ -48,9 +39,6 @@ if($ENABLED != "on" && $ENABLED != "1") {
 }
 $callbackRegisters = "media\n";
 $myPid = getmypid();
-//var_dump($argv);
-
-
 
         $BAUD = "9600";
         $PARITY="none";
@@ -59,10 +47,7 @@ $myPid = getmypid();
 
 $FPPD_COMMAND = $argv[1];
 
-//echo "FPPD Command: ".$FPPD_COMMAND."<br/> \n";
-
 if($FPPD_COMMAND == "--list") {
-
 			echo $callbackRegisters;
 			logEntry("FPPD List Registration request: responded:". $callbackRegisters);
 			exit(0);
