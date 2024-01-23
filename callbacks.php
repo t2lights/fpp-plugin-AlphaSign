@@ -4,7 +4,7 @@ error_reporting(0);
 $pluginName = basename(dirname(__FILE__));
 $DEBUG=true;
 
-$skipJSsettings = 1;
+//$skipJSsettings = 1;
 include_once("/opt/fpp/www/config.php");
 include_once("/opt/fpp/www/common.php");
 include_once("functions.php");
