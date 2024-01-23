@@ -4,9 +4,10 @@ error_reporting(0);
 $pluginName = basename(dirname(__FILE__));
 $DEBUG=false;
 
-include_once("/opt/fpp/www/config.php");
-include_once("/opt/fpp/www/common.php");
+//include_once("/opt/fpp/www/config.php");
+//include_once("/opt/fpp/www/common.php");
 include_once("functions.php");
+include_once("plugin_setup.php");
 
 //$logFile = $settings['logDirectory']."/".$pluginName.".log";
 //$pluginConfigFile = $settings['configDirectory'] . "/plugin." .$pluginName;
