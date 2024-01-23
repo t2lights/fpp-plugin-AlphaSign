@@ -11,8 +11,6 @@ $settingsFile = $settings['configDirectory']."/".$pluginName.".cfg";
 logEntry("The settings file name is called: ".$settingsFile);
 ?>
 
-//=================================================================================================================
-
 <html>
 <head></head>
 
@@ -77,8 +75,6 @@ Separator between SongTitle & Song Artist:
 
 <p/>
 <input id="submit_button" name="submit" type="submit" class="buttons" value="Save Config">
-
-<p>To report a bug, please file it against the BetaBrite plugin project on Git: https://github.com/LightsOnHudson/FPP-Plugin-BetaBrite
 
 <p>
 
