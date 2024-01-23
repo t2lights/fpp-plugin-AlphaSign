@@ -62,23 +62,13 @@ echo "</select> \n";
 <p/>
 STATIC TEXT PRE:
 <input type="text" size="64" value="<? if($STATIC_TEXT_PRE !="" ) { echo $STATIC_TEXT_PRE; } else { echo "";}?>" name="STATIC_TEXT_PRE" id="STATIC_TEXT_PRE"></input>
-
 <p/>
 STATIC TEXT POST:
 <input type="text" size="64" value="<? if($STATIC_TEXT_POST !="" ) { echo $STATIC_TEXT_POST; } else { echo "";}?>" name="STATIC_TEXT_POST" id="STATIC_TEXT_POST"></input>
-
-<p/>
-<p/>
-<p/>
-
 Separator between SongTitle & Song Artist:
 <input type="text" value="<? if($SEPARATOR !="" ) { echo $SEPARATOR; } else { echo "-";}?>" name="SEPARATOR" id="SEPARATOR"></input>
-
-<p/>
 <input id="submit_button" name="submit" type="submit" class="buttons" value="Save Config">
-
 <p>
-
 </form>
 </fieldset>
 </div>
