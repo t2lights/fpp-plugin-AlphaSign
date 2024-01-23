@@ -32,6 +32,8 @@ if (file_exists($pluginConfigFile))
         $DEVICE_CONNECTION_TYPE= urldecode($pluginSettings['DEVICE_CONNECTION_TYPE']);	
 $ENABLED = urldecode($pluginSettings['ENABLED']);
 
+$ENABLED="on";
+
 //arg0 is  the program
 //arg1 is the first argument in the registration this will be --list
 
