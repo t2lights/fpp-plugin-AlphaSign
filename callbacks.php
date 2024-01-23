@@ -41,7 +41,7 @@ $FPPD_COMMAND = $argv[1];
 
 if($FPPD_COMMAND == "--list") {
 			echo "media\n";
-			logEntry("FPPD List Registration request: responded:". $callbackRegisters);
+			logEntry("FPPD List Registration request: responded: media");
 			exit(0);
 }
 
