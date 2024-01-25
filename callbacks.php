@@ -13,8 +13,10 @@ $ENABLED="";
 $logFile = $settings['logDirectory']."/".$pluginName.".log";
 $pluginConfigFile = $settings['configDirectory'] . "/plugin." . $plugin;
 
+logEntry("aaa-".$pluginConfigFile);
 if (file_exists($pluginConfigFile)) {
 	$pluginSettings = parse_ini_file($pluginConfigFile);
+	logEntry (var_dump($pluginSettings));
 }
 
 logEntry("DEBUG: plugin config file: ".$pluginConfigFile);
