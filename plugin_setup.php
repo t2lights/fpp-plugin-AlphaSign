@@ -6,7 +6,27 @@ include_once "functions.php";
 $debug=true;
 $pluginName = basename(dirname(__FILE__));
 $logFile = $settings['logDirectory']."/".$pluginName.".log";
-$settingsFile = $settings['configDirectory']."/".$pluginName.".cfg";
+$settingsFile = $settings['configDirectory']."/".$pluginName.".ini";
+
+$ENABLED=$_POST["ENABLED"];
+$DEVICE=trim($_POST["DEVICE"]);
+$STATIC_TEXT_POST=trim($_POST["STATIC_TEXT_POST"]);
+$STATIC_TEXT_PRE=trim($_POST["STATIC_TEXT_PRE"]);
+$SEPARATOR = $_POST["SEPARATOR"];
+
+if(isset($_POST['submit'])) {
+	WriteSettingToFile("ENABLED",$ENABLED,$pluginName);
+	WriteSettingToFile("DEVICE",$DEVICE,$pluginName);
+	WriteSettingToFile("STATIC_TEXT_PRE",urlencode($STATIC_TEXT_PRE),$pluginName);
+	WriteSettingToFile("STATIC_TEXT_POST",urlencode($STATIC_TEXT_POST),$pluginName);
+	WriteSettingToFile("SEPARATOR",urlencode($SEPARATOR),$pluginName);
+} else {
+	$ENABLED = $pluginSettings['ENABLED'];
+	$DEVICE = $pluginSettings['DEVICE'];
+	$STATIC_TEXT_PRE = urldecode($pluginSettings['STATIC_TEXT_PRE']);
+	$STATIC_TEXT_POST = urldecode($pluginSettings['STATIC_TEXT_POST']);
+	$SEPARATOR = urldecode($pluginSettings['SEPARATOR']);
+}
 
 logEntry("The settings file name is called: ".$settingsFile);
 ?>
