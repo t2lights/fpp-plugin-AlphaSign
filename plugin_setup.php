@@ -6,7 +6,7 @@ include_once "functions.php";
 $debug=true;
 $pluginName = basename(dirname(__FILE__));
 $logFile = $settings['logDirectory']."/".$pluginName.".log";
-$settingsFile = $settings['configDirectory'] . "/plugin." . $plugin;
+$settingsFile = $settings['configDirectory'] . "/plugin." . $pluginName;
 
 $ENABLED=$_POST["ENABLED"];
 $DEVICE=trim($_POST["DEVICE"]);
