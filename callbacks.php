@@ -19,15 +19,11 @@ if (file_exists($pluginConfigFile)) {
 
 logEntry("DEBUG: plugin config file: ".$pluginConfigFile);
 
+$ENABLED = urldecode($pluginSettings['ENABLED']);
+$DEVICE= urldecode($pluginSettings['DEVICE']);	
 $STATIC_TEXT_PRE = urldecode($pluginSettings['STATIC_TEXT_PRE']);
 $STATIC_TEXT_POST = urldecode($pluginSettings['STATIC_TEXT_POST']);
-$LOOPTIME = $pluginSettings['LOOPTIME'];
 $SEPARATOR = urldecode($pluginSettings['SEPARATOR']);	
-$DEVICE= urldecode($pluginSettings['DEVICE']);	
-$DEVICE_CONNECTION_TYPE= urldecode($pluginSettings['DEVICE_CONNECTION_TYPE']);	
-$ENABLED = urldecode($pluginSettings['ENABLED']);
-
-$ENABLED="on";
 
 //arg0 is  the program
 //arg1 is the first argument in the registration this will be --list
