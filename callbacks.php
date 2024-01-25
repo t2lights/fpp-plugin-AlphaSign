@@ -11,7 +11,7 @@ include_once("functions.php");
 $ENABLED="";
 
 $logFile = $settings['logDirectory']."/".$pluginName.".log";
-$pluginConfigFile = $settings['configDirectory'] ."/".$pluginName.".ini";
+$pluginConfigFile = $settings['configDirectory'] . "/plugin." . $plugin;
 
 if (file_exists($pluginConfigFile)) {
 	$pluginSettings = parse_ini_file($pluginConfigFile);
