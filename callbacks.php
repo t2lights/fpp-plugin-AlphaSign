@@ -15,7 +15,6 @@ $pluginConfigFile = $settings['configDirectory'] . "/plugin." . $pluginName;
 
 if (file_exists($pluginConfigFile)) {
 	$pluginSettings = parse_ini_file($pluginConfigFile);
-	logEntry (var_dump($pluginSettings));
 }
 
 logEntry("DEBUG: plugin config file: ".$pluginConfigFile);
@@ -37,23 +36,23 @@ if($ENABLED != "on" && $ENABLED != "1") {
 $FPPD_COMMAND = $argv[1];
 
 if($FPPD_COMMAND == "--list") {
-			echo "media\n";
-			logEntry("FPPD List Registration request: responded: media");
-			exit(0);
+	echo "media\n";
+	logEntry("FPPD List Registration request: responded: media");
+	exit(0);
 }
 
 if($FPPD_COMMAND == "--type") {
-		if($DEBUG)
-			logEntry("DEBUG: type callback requested");
-			//we got a register request message from the daemon
-		$forkResult = fork($argv);
-		if($DEBUG)
+	if($DEBUG) {
+		logEntry("DEBUG: type callback requested");
+	}
+	//we got a register request message from the daemon
+	$forkResult = fork($argv);
+	if($DEBUG) {
 		logEntry("DEBUG: Fork Result: ".$forkResult);
-		exit(0); 
-		//	processCallback($argv);	
+	}
+	exit(0);
 } else {
-
-			logEntry($argv[0]." called with no parameteres");
-			exit(0);
+	logEntry($argv[0]." called with no parameteres");
+	exit(0);
 }
 ?>
